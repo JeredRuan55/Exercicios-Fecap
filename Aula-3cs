@@ -1,0 +1,28 @@
+
+String NomeProduto;
+
+Double Preco1, Preco2, Preco3, PrecoMedio;
+
+Console.WriteLine("Insira o nome do produto: ");
+NomeProduto = Console.ReadLine();
+
+Console.WriteLine("Insira o primeiro preço: ");
+Preco1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Insira o segundo preço: ");
+Preco2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Insira o terceiro preço: ");
+Preco3 = Convert.ToDouble(Console.ReadLine());
+
+PrecoMedio = (Preco1 + Preco2 + Preco3) / 3;
+PrecoMedio = Math.Round(PrecoMedio,2);
+Console.WriteLine("Produto:"+NomeProduto+" Preço Médio="+PrecoMedio);
+
+/*MaiorPreco1 = Math.Max(Preco1, Preco2);
+MaiorPrecoF = Math.Max(MaiorPreco1, Preco3);*/
+
+Console.WriteLine("O maior preço inserido foi: R$"+ Math.Max(Preco1, Math.Max(Preco2, Preco3)));
+
+/* Math.Max serve para comparar valores do Console.ReadLine*/
+
+// Ou
+Double MaiorP, MaiorPF;
