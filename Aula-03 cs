@@ -1,0 +1,68 @@
+float preco, media, soma, count;
+int lim;
+
+count = 1;
+soma = 0;
+Console.WriteLine("Insira quantos numeros deseja ");
+lim = Convert.ToInt32(Console.ReadLine());
+
+while(count <= lim)
+{
+    Console.Write("Insira o " + count + " valor: R$ ");
+    preco = (float)Convert.ToDecimal(Console.ReadLine());
+    soma += preco;
+    count++;
+}
+
+media = (soma / lim);
+
+Console.WriteLine("A média dos valores é: R$" + media); 
+
+// OU
+string NomeProduto;
+
+Double Preco, PrecoMedio, Soma;
+int Count;
+
+
+Console.WriteLine("Insira o nome do produto: ");
+NomeProduto = Console.ReadLine();
+Soma = 0;
+Count = 1;
+while(Count<= 20)
+ {
+    Console.Write("Entre com preço coletado: R$ ");
+    Preco= Convert.ToDouble(Console.ReadLine());
+    Soma = Soma + Preco;
+    Count++; //Count++= Count+1
+}
+
+
+
+PrecoMedio = (Soma) / 20;
+PrecoMedio = Math.Round(PrecoMedio, 2);
+Console.WriteLine("Produto:" + NomeProduto + " Seu Preço Médio é: " + PrecoMedio);
+
+/*MaiorPreco1 = Math.Max(Preco1, Preco2);
+MaiorPrecoF = Math.Max(MaiorPreco1, Preco3);*/
+
+
+
+/* Math.Max serve para comparar valores do Console.ReadLine*/
+
+// ou
+
+Double count, soma, num;
+count = 1;
+soma = 0;
+Console.WriteLine("Insira o numero de vezes que deseja somar: ");
+num = Convert.ToDouble(Console.ReadLine());
+while (count <= num)
+{
+    soma = soma + count;
+    Console.WriteLine("Somou " + count + " soma vale agora:" + soma);
+    count = count + 1;
+}
+
+Console.WriteLine("Soma dos " + num + " numeros é : " + soma);
+
