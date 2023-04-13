@@ -1,0 +1,21 @@
+
+Double [] Preco=new Double [5];
+Double Soma;
+Double PrecoMaior, PrecoMenor, PrecoMedio;
+for (int i = 0; i < Preco.Length; i++)
+ {
+    Console.WriteLine("Entre com o Preço " + i + " coletado: ");
+    Preco[i] = Convert.ToDouble(Console.ReadLine());
+}
+Soma = 0;
+for (int i = 0; i< Preco.Length; i++)
+{
+    Console.WriteLine("Preço " + i + " coletado: " + Preco[i]);
+    Soma= Soma + Preco[i];
+}
+Console.WriteLine("A soma dos preços é: "+ Soma);
+
+PrecoMaior = Preco[0];
+PrecoMenor = Preco[0];
+i= 1
+    
