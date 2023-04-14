@@ -17,5 +17,22 @@ Console.WriteLine("A soma dos preços é: "+ Soma);
 
 PrecoMaior = Preco[0];
 PrecoMenor = Preco[0];
-i= 1
+p= 1
+while (p < Preco.Length)
+{
+
+    if (Preco[p] > PrecoMaior)
+    {
+        PrecoMaior = Preco[p];
+    }
+    if (Preco[p] < PrecoMenor)
+    {
+        PrecoMenor = Preco[p];
+    }
+    p++;
+}
+Console.WriteLine("Maior Preço: R$ " + Math.Round(PrecoMaior, 2));
+Console.WriteLine("Menor Preço: R$" + Math.Round(PrecoMenor, 2));
+PrecoMedio = Soma / Preco.Length;
+Console.WriteLine("Média de Preço: R$ " + Math.Round(PrecoMedio, 2));
     
