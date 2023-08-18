@@ -1,0 +1,201 @@
+--HTML--
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ruan">
+    <meta name="description" content="Esse site fala sobre dragões que vivem no interior de Vladskovic">
+    <meta name="keywords" content="Dragões, Dragão Azul, Gelo, Dragão Vermelho, Fogo, Dragão Verde, Natureza">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Sobre Dragões de Vladskovic</title>
+</head>
+
+<body id="topo">
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">Dragão Azul</a>
+                <a href="dragaovermelho.html">Dragão Vermelho</a>
+                <a href="dragãoverde.html">Dragão Verde</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Sobre Dragões Azuis</h1>
+            <div class="image-text-wrapper">
+                <img src="img/DragonBlue.png" alt="Dragão Azul">
+                <div class="text-content">
+                    <p>Os dragões azuis, frequentemente encontrados nas lendas e mitologias de diversas culturas, são
+                        criaturas majestosas que representam o poder e a serenidade. Estes dragões, com suas escamas
+                        azul-celeste cintilantes, são frequentemente associados ao elemento água, em contraste com
+                        dragões de outras cores, que podem estar ligados a elementos como fogo ou terra. Muitas
+                        histórias contam sobre como os dragões azuis governam vastos oceanos e lagos profundos,
+                        guardando tesouros submersos e segredos antigos.
+                    </p>
+                    <p>No entanto, sua representação não se limita à mera associação com a água. Em algumas culturas, o
+                        dragão azul simboliza a sabedoria, calma e a capacidade de comunicação. Suas imponentes asas
+                        frequentemente são descritas como sendo semelhantes a nuvens macias, e seus olhos, profundos e
+                        perspicazes, refletem o conhecimento acumulado ao longo de milênios.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <section>
+            <h2>Informações sobre os dragões</h2>
+            <table>
+                <caption>Tipos de dragões e suas origens</caption>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Origem</th>
+                        <th>Elemento</th>
+                    </tr>
+                </thead>
+                <!-- tbody>(tr>td*3)*3 -->
+                <tbody>
+                    <tr>
+                        <td>Baguela Azul</td>
+                        <td>Lendas do Oriente</td>
+                        <td>Água</td>
+                    </tr>
+                    <tr>
+                        <td>Banguela Vermelho</td>
+                        <td>Mitologia Euro</td>
+                        <td>Fogo</td>
+                    </tr>
+                    <tr>
+                        <td>Banguela Verde</td>
+                        <td>Mitos Celtas</td>
+                        <td>Terra</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- footer>form+div.social-links>a*3 -->
+        <footer>
+            <h2>Dúvidas converse com o dragão</h2>
+            <form action="">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id=" email" name="email"><br><br>
+                    <input type="submit" value="Enviar">
+            </form>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" title="linkedin"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+        <a href="#topo">Voltar ao topo</a>
+    </div>
+</body>
+
+</html>
+
+--CSS--
+
+html{
+    scroll-behavior: smooth;
+}
+    
+    body{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #0b335f;
+color: #003366;
+padding: 20px;
+}
+
+.container{
+    background-color: aliceblue;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    margin-bottom: 20px;
+}
+
+nav a, a{
+margin-right: 15px;
+text-decoration: none;
+color: #0077b3;
+}
+
+nav>a:hover{
+    text-decoration: underline;
+}
+
+.image-text-wrapper{
+    display: flex;
+    align-items: start;
+    gap:20px;
+}
+
+.image-text-wrapper img{
+width: 30%;
+}
+
+.text-content{
+flex: 1;
+text-align: justify;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top:20px;
+    border: 1px solid #0077b3;
+}
+
+caption{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+thead{
+    background-color: #0077b3;
+    color: aliceblue;
+}
+
+th,td{
+    border: 1px solid#b7d9f1;
+    padding: 8px;
+    text-align: center;
+}
+
+tbody tr:nth-cjild(even){
+    background-color:#b7d9f1;
+}
+
+tbody tr:hover{
+    background-color: #b3d4e0;
+}
+
+footer{
+    margin-top: 20px;
+}
+
+.social-links{
+    margin-top: 20px;
+}
+
+.social-links a{
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.social-links i{
+    font: 24px;
+    color: #0077b3;
+}
+
+.social-links a:hover i{
+    color: #003366;
+}
