@@ -1,0 +1,295 @@
+--- HTML ---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media768.css">
+    ,<link rel="stylesheet" href="media480.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- div.container>header+aside+main+section#c1+section#c2+section#c3+footer -->
+    <div class="container">
+        <header>
+            <!-- nav.menu>div.logo+ul.menu-items>li*5>a -->
+            <nav class="menu">
+                <div class="logo">Sobre Dogs...</div>
+                <ul class="menu-items">
+                    <li><a href="#">Raças</a></li>
+                    <li><a href="#">Dicas</a></li>
+                    <li><a href="#">Adote!</a></li>
+                </ul>
+                <!-- div.search-bar>input+button -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Encontre um dog...">
+                    <button type="submit">Buscar</button>
+                </div>
+            </nav>
+
+        </header>
+        <aside>
+            <!-- div.author-info>img.author-thumbnail+h2.author-name+a.author-email+p.author-bio+div.docisl-links>a*5 -->
+            <div class="author-info">
+                <img src="Img/dog.PNG" alt="Cachorrinho fofinho" class="author-thumbnail">
+                <h2 class="author-name">Doguinhos</h2>
+                <a href="mailto:ruanpaulonegocios@gmail.com"
+                 class="author-email">Mande um e-mail :</a>
+                <p class="author-bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos neque porro iure dolorem cum eaque et deleniti odio laboriosam commodi libero, vitae nobis reprehenderit, similique harum doloribus itaque! Natus, dolore!</p>
+                <div class="docisl-links">
+                    <a href="fab"><i class="fab fa-facebook social-icon"></i></a>
+                    <a href="fab"><i class="fab fa-behance social-icon"></i></a>
+                    <a href="fab"><i class="fab fa-linkedin social-icon"></i></a>
+                    <a href="fab"><i class="fab fa-instagram social-icon"></i></a>
+                    <a href=""><i class="fab fa-github social-icon"></i></a>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <img src="Img/pexels-cup-of-couple-8473542.jpg" alt="Lindos Cachorros" class="main-dog">
+        </main>
+        <section id="c1"><img src="Img/do2.PNG" alt="Dog 1"></section>
+        <section id="c2"><img src="Img/do3.PNG" alt="Dog 2"></section>
+        <section id="c3"> <img src="Img/do4.PNG" alt="Dog 3"></section>
+        <footer>
+                <div class="footer-container">
+                    <!-- div.footer-container>div.footer-section*3 -->
+                    <div class="footer-section">
+                        <!-- ul>li-*5 -->
+                        <ul>
+                            <li >Raças</li>
+                            <li >Rações</li>
+                            <li >Competições</li>
+                            <li >Habilidades</li>
+                            <li >Adote</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <!-- nav>ul>li*3>a -->
+                        <nav class="menu footer">
+                            <ul>
+                                <li><a href="#"target="_blank">Shih-Tzu</a></li>
+                                <li><a href="#"="_blank">Golden Retriever</a></li>
+                                <li><a href="#"="_blank">Caramelo</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-section">
+                        <p><a href="ruanpaulonegocios@gmail.com" class="author-email ">Contato: cachorroslindos@gmail.com</a></p>
+                        <p>Telefone:<strong>(11)946664228</strong></p>
+                    </div>
+                </div>
+                <div clas="footer-bottom">
+                    <p>2023 - Sobre Dogs - Todos os direitos reservados</p>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+--- CSS ---
+
+/* Estrutura Principal */
+body{
+  
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #062c01b2;
+    /* color: #003366; */
+     padding: 20px; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header,
+aside,
+main,
+#c1, #c2,#c3,
+footer{
+background-color: #a9a9a9;
+padding: 10px;
+border-radius: 10px;
+}
+.container{
+        display: grid;
+        /* height: 100vh; */
+        gap: 12px;
+        grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr;
+        grid-template-rows: 0.3fr 0.8fr 1fr 0.3fr;
+        grid-template-areas:
+                                "a h h h"
+                                "a m m m"
+                                "a c1 c2 c3"
+                                "f f f f";
+        /* background-color: rgb(6, 37, 0);
+        /* padding: 20px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto; */ */
+    }
+header{grid-area: h;}
+aside{
+    grid-area: a;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+main{grid-area: m;}
+#c1{grid-area: c1;}
+#c2{grid-area: c2;}
+#c3{grid-area: c3;}
+footer{grid-area: f;}
+
+
+/* Estilos Aside */
+.author-info{
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.author-thumbnail{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: #000000 solid 2px;
+    display: block;
+    margin: auto;
+
+}
+.author-name{font-size: 20px;}
+.author-email{font-size: 16px; color:#051b00; text-decoration: none;}
+.author-email:hover{color:#000000; text-decoration: underline;}
+.author.bio{
+    font-size: 12px;
+    text-align: justify;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.social-links{font: 14px; margin-top: 10px; padding-bottom: 20px;}
+.social-icon{font-size: 32px; color:#2e2d2d; margin-right: 10px;}
+
+/* Estilos Section */
+#c1 img, #c2 img, #c3 img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: #000000 solid 2px;
+}
+
+/* Estilo do Header */
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    align-items: center;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px;
+    margin-right: auto;
+}
+
+.search-bar{
+    padding: 8px;
+    margin-left: auto;
+}
+.search-bar input{
+    margin-right: 5px;
+}
+.search-bar button{
+    padding: 5px 10px;
+}
+
+.menu-items{
+    display:flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+.menu-items li{
+    margin-left: 15px;
+
+}
+.menu-items li:first-child{
+    margin-left: 0;
+}
+.menu-items li a{
+    text-decoration: none; color: #333;
+}
+.menu-items li a:hover{
+    text-decoration: underline; color: #000000;
+}
+
+/* Estilo Footer */
+footer{padding: 5px 0; text-align: center;}
+footer ul{list-style: none; padding: 0;}
+footer ul li{text-decoration: none; color: #2e2d2d;}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.footer-section{
+    flex: 1;
+    padding: 5px;
+    max-width: 300px;
+}
+/* Estilo Main */
+main{position: relative; overflow: hidden;}
+.main-dog{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+--- CSS Media768 ---
+
+@media screen and (max-width:768px){
+    .container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: ofr 0.3fr 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+                        "h h h"
+                        "a a a"
+                        "m m m"
+                        "c1 c2 c3"
+                        "f f f"
+    }
+}
+
+--- CSS Media480 ---
+
+@media screen and (max-width:480px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.4fr 0.7fr 0.7fr 0.7fr 0.5fr;
+        grid-template-areas: 
+                            "h"
+                            "a"
+                            "c1"
+                            "c2"
+                            "c3"
+                            "f"
+        ;
+    }
+    main{
+        display: none;
+
+    }
+}
