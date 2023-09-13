@@ -23,3 +23,18 @@ ALTER TABLE Pessoa MODIFY Column telefone varchar(20);
 ALTER TABLE Pessoa MODIFY Column telefone varchar(20) NOT NULL;
 
 DROP TABLE Pessoa;
+
+CREATE DATABASE IF NOT EXISTS CONDOMÍNIO;
+USE CONDOMÍNIO;
+CREATE TABLE Edifício(
+CodEdifício integer NOT NULL,
+Endereço varchar(50) NOT NULL,
+primary key (CodEdifício)
+);
+CREATE TABLE Apartamento (
+CodEdifício integer NOT NULL,
+NumeroApartam integer NOT NULL,
+AreaApartamento double NOT NULL,
+primary key (NumeroApartam),
+constraint FKApart foreign key (CodEdifício) references Edifício(CodEdifício)
+);
