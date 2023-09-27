@@ -1,0 +1,80 @@
+--HTML--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"> 
+    <title>Ruan's Landing Page</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Ruan</h1>
+            <h1>Paulo</h1>
+        </div>
+
+        <ul>
+            <a href="#"><li>Inicio</li></a>
+            <a href="#"><li>Quem Sou?</li></a>
+            <a href="#"><li>Experiência</li></a>
+            <a href="#"><li>Contato</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Mande propostas de trabalho</h2>
+            <h2>Agora</h2>
+            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+            <form>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <input type="email" placeholder="Proposta">
+                <input type="submit" placeholder="Enviar">
+            </form>
+        </aside>
+        <article>
+            <img src="Img/IMG_4310.png" alt="My Photo">
+        </article>
+    </main>
+</body>
+</html>
+
+-- CSS --
+
+body{
+    background-color: blueviolet;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+h1{
+    font-weight: 200;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
